@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: at-customer-service
+server:
+   port: 23010
+
+eureka:
+   client:
+      registerWithEureka: true
+      fetchRegistry: true
+      serviceUrl:
+         defaultZone: http://localhost:23000/eureka
+   server:
+      enable-self-preservation: false
+      waitTimeInMsWhenSyncEmpty: 0
+   instance:
+      hostname: localhost
+      lease-expiration-duration-in-seconds: 15
+      lease-renewal-interval-in-seconds: 5
